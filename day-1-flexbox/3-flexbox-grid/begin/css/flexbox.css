@@ -38,14 +38,23 @@ div img {
 
 [class*="col-"] {
 	margin-left: 4%;
+	flex: 0 0 92%;
 }
 
-.col-1 {
+
+.col-1-2,
+.col-1-4 {
 	background-color: #ffc;
 }
 
 .col-2 {
 	background-color: #ccf;
+}
+
+.col-2-4 {
+	background-color: #ccf;
+	flex: 0 0 92%;
+	order: -1;
 }
 
 .col-3 {
@@ -57,16 +66,31 @@ div img {
 }
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
+  .col-1-2,
+  .col-2 {
+	flex: 0 0 44%; 
+  }
 
+  .col-1-4,
+  .col-3,
+  .col-4 {
+	flex: 0 0 92%;
+  }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-  .col-1 {
+  .col-1-2,
+  .col-1-4 {
 	flex: 0 0 20%; 
   }
 
-  .col-2 {
+  .col-2,
+  .col-2-4 {
 	flex: 0 0 44%;
+  }
+
+  .col-2-4 {
+	order: 0;
   }
 
   .col-3 {
