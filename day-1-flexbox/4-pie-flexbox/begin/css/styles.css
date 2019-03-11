@@ -17,7 +17,10 @@ h1,h2,h3,h4,h5,h6 {
   color: #C80060;
 }
 .wrapper {
+	width: 97%;
+	max-width: 1200px;
 	margin: 0 auto;
+	float: none;
 }
 article img {
   border-radius: 10px;
@@ -34,19 +37,6 @@ nav ul {
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
   overflow: auto;
-
-}
-/* splits nav into 2 columns
-http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
-nav li:nth-child(even) {
-  width: 50%;
-  float: right;
-  padding: 0.5em;
-}
-nav li:nth-child(odd) {
-  width: 50%;
-  float: left;
-    padding: 0.5em;
 }
 nav a {
   color: #c80060;
@@ -57,20 +47,19 @@ nav a {
 nav a:hover {
   color:#00c4c7;
 }
-
-
-.row:before, 
-.row:after {
-    content:"";
-    display: table;
-    clear:both;
+/* grid system -- mobile first! */
+.row {
+  display: flex;
+  flex-flow: row wrap;
 }
-div.row {
+
+.row--main {
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 1em;
 }
+
 .floatleft {
   float: left;
   margin: 0 1em 1em 0;
